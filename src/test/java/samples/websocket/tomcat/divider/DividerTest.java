@@ -12,4 +12,10 @@ public class DividerTest {
         int result = d.divide(20,4);
         assertEquals(result, 5);
     }
+
+    @Test(expected = ArithmeticException.class)
+    public void divideBy0() {
+        Divider d = new Divider();
+        d.divide(20,0);
+    }
 }
