@@ -9,13 +9,15 @@ public class DividerTest {
     @Test
     public void divide() {
         Divider d = new Divider();
-        int result = d.divide(20,4);
-        assertEquals(result, 5);
+        String result = d.divide("20 4");
+        assertEquals(result, "Result is: 5");
     }
 
-    @Test(expected = ArithmeticException.class)
+    @Test
     public void divideBy0() {
         Divider d = new Divider();
-        d.divide(20,0);
+        String result = d.divide("20 0");
+        assertEquals(result, "Can't divide by 0");
+
     }
 }
