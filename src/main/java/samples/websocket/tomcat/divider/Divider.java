@@ -8,8 +8,8 @@ public class Divider {
 
         int n1 = Integer.parseInt(numbers[0]);
         int n2 = Integer.parseInt(numbers[1]);
-        return "Result is: "+(n1/n2);
-
+        if(n2 != 0) return "Result is: "+(n1/n2);
+        else return "Can't divide by 0";
     }
 
 }

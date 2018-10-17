@@ -27,4 +27,11 @@ public class DividerTest {
         assertEquals(result, "Result is: 10");
     }
 
+    @Test
+    public void divideBy0() {
+        Divider d = new Divider();
+        String result = d.divide("20 0");
+        assertEquals(result, "Can't divide by 0");
+    }
+
 }
